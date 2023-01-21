@@ -1,36 +1,45 @@
 header {
-    background-color: blueviolet;
-    color: red;
-    -webkit-text-stroke: 2px gold;
+    background-color: black;
+    color: hotpink;
+    -webkit-text-stroke: 0.5px aqua;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     font-weight: 1000px;
     font-size: x-large;
+    padding: 20px;
+    /* font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
 }
 
-div.links {
+quote {
     display: flex;
     justify-content: center;
-    align-items: center;
+    padding-left: 250px;
+    padding-right: 250px;
 }
 
 .main {
-    background-color: #EE4B2B;
+    background-color: black;
     height: 550px;
     width: auto;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
 
-.center {
-    display: flex;
-    width: fit-content;
+button {
+    margin: 10px;
+    background-color: aqua;
+
 }
 
-button {
-    margin: 100px;
+.buttons {
+    align-items: center;
+}
+
+.fire-1000 {
+    display: flex;
+    justify-content: center;
 }
 
 .bar {
@@ -43,21 +52,16 @@ button {
     flex-direction: column;
 }
 
-.left-bar {
-    height: 500px;
-    width: auto;
-    padding: 20px;
-    display: flex;
-} 
-
-.right-bar {
-    display: flex;
-} 
-
-
 footer {
     background-color: blueviolet;
     display: flex;
     justify-content: space-evenly;
 }
 
+img {
+    height: auto; 
+    width: auto; 
+    max-width: 400px; 
+    max-height: 400px;
+    padding: 50px;
+}
