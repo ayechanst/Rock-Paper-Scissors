@@ -6,47 +6,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <script src="rockPaperScissors.js"></script>
+    <script src="rockPaperScissors.js" defer></script>
     <link rel="dom" href="dom.js"> 
 </head>
 
+<body>
+  <div class="title">
+    <header>
+      <h1>1,000 Rounds of Rock Paper Scissors (or best of 3)</h1>
+    </header>
+  </div>
 
-<body>                         
-
-  <header>
-    <quote>
-      </h1>
-        Bullets fly, legs buckle, bodies pile to the sky, Thousand rounds will lay you down, we got enough to go around" -Pouya 
-      </h1>
-    </quote>
-  </header>
-
+  <audio src="sounds/gun.mp3"></audio>
+    
   <section class="main">
-
-    <img src="images/woman-pointing-guns.jpg" alt="kids with guns" class="woman">
-
-    <div class="buttons">
-
-      <div class="OGbuttons">
-        <button id="rock">Rock</button>
-        <button id="paper">Paper</button>
-        <button id="scissors">Scissors</button>
-      </div>
-      <div class="fire-1000">
-        <button>Fire 1,0000 Rounds</button>
-      </div>
-
+    <div class="flex">
+      <img src="images/woman-pointing-guns.jpg" alt="woman with gun" class="left-image">
     </div>
-
-    <img src="images/woman-with-akimbo-pistols.jpg" alt="woman with guns" id="woman">
-
+    <div class="middle">
+      <div class="buttons">
+        <button id="thousand-button">PLAY 1,000 ROUNDS</button>
+      </div>
+      <div class="message">
+        <div>(must have full volume to function)</div>
+      </div>
+      <quote>
+        <h3>"Bullets fly legs buckle bodies pile to the sky,</h3>
+        <h3>thousand rounds will lay you down,</h3>
+        <h3>we got enough to go around"</h3>
+        <h3>- Pouya</h3>
+      </quote>
+      <div class="buttons">
+        <button id="rock-button">Rock</button>
+        <button id="paper-button">Paper</button>
+        <button id="scissors-button">Scissors</button>
+      </div>
+      <div class="result-box">
+          <div id="result">PRINT THE RESULT HERE</div>
+      </div>
+      <div class="score-box">
+        <div id="score">SCORES GOES HERE</div>
+      </div>
+    </div>
+    <div class="flex">
+      <img src="images/woman-pointing-guns.jpg" alt="woman with gun" class="right-image">
+    </div>
   </section>
-
-  <footer>
-    <div class="footer links">
-      <a>donate $1000</a>
-      <a>contact me</a>
-    </div>
-  </footer>
 </body>
 </html>

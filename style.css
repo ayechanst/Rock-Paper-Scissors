@@ -1,67 +1,101 @@
-header {
+body {
     background-color: black;
-    color: hotpink;
-    -webkit-text-stroke: 0.5px aqua;
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    font-weight: 1000px;
-    font-size: x-large;
-    padding: 20px;
-    /* font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
+    justify-content: center;
+    flex-direction: column;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    }
+
+.main {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-shrink: 0;
+}
+
+.middle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h1 {
+    padding-bottom: 80px;
+    color: hotpink;
+    -webkit-text-stroke: 1px aqua;
 }
 
 quote {
+    flex-direction: column;
     display: flex;
     justify-content: center;
-    padding-left: 250px;
-    padding-right: 250px;
-}
+    color: hotpink;
+    -webkit-text-stroke: 0.5px aqua;
+    padding-bottom: 30px;
+} 
 
-.main {
-    background-color: black;
-    height: 550px;
-    width: auto;
+.buttons {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-evenly;
+    padding-bottom: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 button {
-    margin: 10px;
-    background-color: aqua;
-
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 12px;
+    height: 30px;
+    width: auto;
+    background-color: crimson;
 }
 
-.buttons {
-    align-items: center;
-}
-
-.fire-1000 {
+.result-box,
+.score-box {
     display: flex;
     justify-content: center;
+    padding-bottom: 30px;
+    justify-content: center;
+    color: hotpink;
+    -webkit-text-stroke: 0.5px aqua;
 }
 
-.bar {
-    background-color: blueviolet;
-    padding: 18px;
-}
-
-.links { 
+.message {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    color: hotpink;
+    -webkit-text-stroke: 0.5px aqua;
+    padding-bottom: 50px;
 }
 
 footer {
     background-color: blueviolet;
     display: flex;
     justify-content: space-evenly;
+    padding-top: 30px;
+}
+
+.flex {
+    display: flex;
 }
 
 img {
     height: auto; 
-    width: auto; 
-    max-width: 400px; 
-    max-height: 400px;
-    padding: 50px;
+    width: auto;
+    background-color: black;
+    max-height: 430px;
+    max-width: 580px;
+}
+
+.left-image {
+    rotate: 270deg;
+}
+
+.right-image {
+    rotate: 90deg;
 }

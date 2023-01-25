@@ -1,13 +1,16 @@
 "use strict";
 
-const rockButton = document.getElementById('rock');
-const paperButton = document.getElementById('paper');
-const scissorsButton = document.getElementById('scissors');
+const rockButton = document.getElementById('rock-button');
+const paperButton = document.getElementById('paper-button');
+const scissorsButton = document.getElementById('scissors-button');
+const resultDisplay = document.getElementById('result');
+const scoreDisplay = document.getElementById('score');
 
+// function playSound() {
+//     const audio = new Audio('sounds/gun.mp3');           //in progress to add sound
+//     audio.play(); 
+// }
 
-
-//const ps = require("prompt-sync");
-//const prompt = ps()
 
 function getComputerChoice() {                      //returns a string (rock, paper, or scissors)
     let num = Math.floor(Math.random() * 3)
@@ -22,70 +25,91 @@ function getComputerChoice() {                      //returns a string (rock, pa
     }
 };
 
+rockButton.addEventListener("click", () => {
+    playGame('rock');
+})
 
-// function getHumanChoice() {
-//     console.log('the human choice was: ' + humanChoice);
-//     return humanChoice;
+paperButton.addEventListener("click", () => {
+    playGame('paper');
+})
+
+scissorsButton.addEventListener("click", () => {
+    playGame('scissors');
+})
+
+// thousandRoundButton.addEventListener("click", () => {            //in progress to 1,000 rounds
+//     playThousand('rock')
+// })
+    
+let computerWin = 0;
+let humanWin = 0;
+
+function playGame(humanChoice) {
+
+    function playRound(humanChoice) {
+        let computerChoice = getComputerChoice();
+        if (computerChoice === humanChoice) {
+            return 'tie';
+        }
+        if (computerChoice === 'rock') {  
+            return humanChoice === 'paper' 
+            ? 'human win'
+            : 'computer win'
+        }
+        if (computerChoice === 'paper') {
+            return humanChoice === 'scissors' 
+            ? 'human win'
+            : 'computer win'
+        }
+        if (computerChoice === 'scissors') {
+            return humanChoice === 'rock' 
+            ? 'human win'
+            : 'computer win'
+        }
+    }
+
+    let result = playRound();
+
+    if (result === 'tie') {
+        resultDisplay.innerHTML = 'tie game';
+        scoreDisplay.innerHTML = 'H: ' + humanWin + ' ' + 'C: ' + computerWin;
+    } else if (result === 'human win') {
+        humanWin++;
+        resultDisplay.innerHTML = 'human won the round';
+        scoreDisplay.innerHTML = 'H: ' + humanWin + ' ' + 'C: ' + computerWin;
+        if (humanWin >= 3) {
+            resultDisplay.innerHTML = 'HUMAN WON GAME';
+        } else if (computerWin >= 3) {
+            resultDisplay.innerHTML = 'COMPUTER WON GAME';
+        }
+    } else if (result === 'computer win') {
+        computerWin++;
+        resultDisplay.innerHTML = 'computer won the round';
+        scoreDisplay.innerHTML = 'H: ' + humanWin + ' ' + 'C: ' + computerWin;
+        if (humanWin >= 3) {
+            resultDisplay.innerHTML = 'HUMAN WON GAME';
+        } else if (computerWin >= 3) {
+            resultDisplay.innerHTML = 'COMPUTER WON GAME';
+        }
+    } else {
+        return 'ERROR: play round';
+    }
+};
+
+// function playThousand(rock) {
+//     for (i = 0; i <= 1000; i++) {
+//         playRound(rock);
+//         if (result === 'tie') {
+//             resultDisplay.innerHTML = 'tie game';
+//             scoreDisplay.innerHTML = 'H: ' + humanWin + ' ' + 'C: ' + computerWin;        //in progress to add sound
+//         } else if (result === 'human win') {     
+//             humanWin++;
+//             resultDisplay.innerHTML = 'human won the round';
+//             scoreDisplay.innerHTML = 'H: ' + humanWin + ' ' + 'C: ' + computerWin;
+//         } else if (result === 'computer win') {
+//             computerWin++;
+//             resultDisplay.innerHTML = 'computer won the round';
+//             scoreDisplay.innerHTML = 'H: ' + humanWin + ' ' + 'C: ' + computerWin;
+//         }
+//     }   
 // }
-
-//console.log(getComputerChoice());
-
-function playRound(getComputerChoice, getHumanChoice) {
-    let computerChoice = getComputerChoice();
-    let humanChoice = getHumanChoice();
-    if (computerChoice === humanChoice) {
-        return 'tie';
-    }
-    if (computerChoice === 'rock') {  
-        return humanChoice === 'paper' 
-        ? 'human win'
-        : 'computer win'
-    }
-    if (computerChoice === 'paper') {
-        return humanChoice === 'scissors' 
-        ? 'human win'
-        : 'computer win'
-    }
-    if (computerChoice === 'scissors') {
-        return humanChoice === 'rock' 
-        ? 'human win'
-        : 'computer win'
-    }
-}
-
-//console.log(playRound(getComputerChoice, 'rock'));
-
-function game() {
-    let computerWin = 0;
-    let humanWin = 0;
-    while ((computerWin <= 3) || (humanWin <= 3)) {
-
-        let roundResults = playRound(getComputerChoice, getHumanChoice);
-
-        if (roundResults === 'tie') {
-            console.log('tie');
-            continue;
-        }
-        else if (roundResults === 'computer win') {
-            console.log('computer wins this round');
-            if (computerWin >= 2) {
-                return 'COMPUTER WIN'
-            }
-            computerWin ++;
-        } 
-        else if (roundResults === 'human win') {
-            console.log('human wins this round');
-            if (humanWin >= 2) {
-                return 'HUMAN WIN';
-            }
-            humanWin++;
-        }
-        else {
-            return 'ERROR: game '
-        }
-            
-    }
-}
-
-console.log(game());
-
