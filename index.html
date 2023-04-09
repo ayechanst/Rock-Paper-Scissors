@@ -1,56 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <script src="rockPaperScissors.js" defer></script>
-    <link rel="dom" href="dom.js"> 
-</head>
+  </head>
 
-<body>
-  <div class="title">
-    <header>
-      <h1>1,000 Rounds of Rock Paper Scissors (or best of 3)</h1>
-    </header>
-  </div>
-
-  <audio src="sounds/gun.mp3"></audio>
-    
-  <section class="main">
-    <div class="flex">
-      <img src="images/woman-pointing-guns.jpg" alt="woman with gun" class="left-image">
+  <body>
+    <div class="title">
+      <header>
+        <h1>1,000 Rounds of Rock Paper Scissors</h1>
+      </header>
     </div>
-    <div class="middle">
-      <div class="buttons">
+    <div class="main">
+      <div class="left-picture"></div>
+      <div class="middle">
         <button id="thousand-button">PLAY 1,000 ROUNDS</button>
-      </div>
-      <div class="message">
-        <div>(must have full volume to function)</div>
-      </div>
-      <quote>
         <h3>"Bullets fly legs buckle bodies pile to the sky,</h3>
-        <h3>thousand rounds will lay you down,</h3>
+        <h3>thousand round will lay you down,</h3>
         <h3>we got enough to go around"</h3>
         <h3>- Pouya</h3>
-      </quote>
-      <div class="buttons">
-        <button id="rock-button">Rock</button>
-        <button id="paper-button">Paper</button>
-        <button id="scissors-button">Scissors</button>
+        <div class="button-container">
+          <button id="rock-button">stone</button>
+          <button id="paper-button">Paper</button>
+          <button id="scissors-button">Scissors</button>
+        </div>
+        <div class="score-box">
+          <div class="human-score">human score</div>
+          <div class="computer-score">computer score</div>
+        </div>
       </div>
-      <div class="result-box">
-          <div id="result">PRINT THE RESULT HERE</div>
-      </div>
-      <div class="score-box">
-        <div id="score">SCORES GOES HERE</div>
-      </div>
+      <div class="right-picture"></div>
     </div>
-    <div class="flex">
-      <img src="images/woman-pointing-guns.jpg" alt="woman with gun" class="right-image">
-    </div>
-  </section>
-</body>
+
+    <audio src="sounds/gun.mp3"></audio>
+  </body>
 </html>

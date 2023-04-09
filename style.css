@@ -1,101 +1,96 @@
 body {
-    background-color: black;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .title {
-    display: flex;
-    justify-content: center;
-    }
+  display: flex;
+  justify-content: center;
+}
 
 .main {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-shrink: 0;
 }
 
 .middle {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 h1 {
-    padding-bottom: 80px;
-    color: hotpink;
-    -webkit-text-stroke: 1px aqua;
+  padding-bottom: 30px;
+  color: hotpink;
+  -webkit-text-stroke: 1px aqua;
 }
 
-quote {
-    flex-direction: column;
-    display: flex;
-    justify-content: center;
-    color: hotpink;
-    -webkit-text-stroke: 0.5px aqua;
-    padding-bottom: 30px;
-} 
-
-.buttons {
-    display: flex;
-    justify-content: space-evenly;
-    padding-bottom: 20px;
-    padding-left: 5px;
-    padding-right: 5px;
+h3 {
+  display: flex;
+  justify-content: center;
+  color: hotpink;
+  -webkit-text-stroke: 0.5px aqua;
 }
 
 button {
-    padding-left: 5px;
-    padding-right: 5px;
-    border-radius: 12px;
-    height: 30px;
-    width: auto;
-    background-color: crimson;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 12px;
+  height: 30px;
+  width: auto;
+  background-color: crimson;
 }
 
-.result-box,
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding-bottom: 10px;
+}
+
+.result-box {
+  display: flex;
+  justify-content: center;
+  color: hotpink;
+  -webkit-text-stroke: 0.5px aqua;
+}
+
 .score-box {
-    display: flex;
-    justify-content: center;
-    padding-bottom: 30px;
-    justify-content: center;
-    color: hotpink;
-    -webkit-text-stroke: 0.5px aqua;
-}
-
-.message {
-    display: flex;
-    justify-content: center;
-    color: hotpink;
-    -webkit-text-stroke: 0.5px aqua;
-    padding-bottom: 50px;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  color: hotpink;
+  -webkit-text-stroke: 0.5px aqua;
+  padding-bottom: 50px;
 }
 
 footer {
-    background-color: blueviolet;
-    display: flex;
-    justify-content: space-evenly;
-    padding-top: 30px;
+  background-color: blueviolet;
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 30px;
 }
 
 .flex {
-    display: flex;
+  display: flex;
 }
 
-img {
-    height: auto; 
-    width: auto;
-    background-color: black;
-    max-height: 430px;
-    max-width: 580px;
+.left-picture {
+  background-image: url('./images/woman-pointing-guns.jpg');
+  height: 300px;
+  width: 400px;
+  background-size: cover;
+  rotate: 270deg;
 }
 
-.left-image {
-    rotate: 270deg;
-}
-
-.right-image {
-    rotate: 90deg;
+.right-picture {
+  background-image: url('./images/woman-pointing-guns.jpg');
+  background-size: cover;
+  height: 300px;
+  width: 400px;
+  rotate: 90deg;
 }
